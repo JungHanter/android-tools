@@ -14,6 +14,8 @@ if [ ! -d $MY_UPDATE ]; then
 fi
 
 cd $MY_KERNEL
+make distclean
+make clotai_defconfig
 make zImage
 make modules
 cd $OLD_PWD
