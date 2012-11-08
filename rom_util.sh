@@ -59,7 +59,7 @@ pack_rom()
 	cp $GEN_SH system/xbin/
 
 	7za a $old_pwd/rom_update.zip system boot.img
-	cd $MY_ANDROID_TOOLS_DIR
+	cd $MY_ANDROID_TOOLS_DIR/rom_build
 	7za a $old_pwd/rom_update.zip META-INF
 	cd $old_pwd
 	sign.sh rom_update.zip
