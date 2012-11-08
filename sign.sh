@@ -20,8 +20,6 @@ SIGNAPK=${wdir}/signtools/signapk.jar
 TESTKEY_PEM=${wdir}/signtools/testkey.x509.pem
 TESTKEY_KEY=${wdir}/signtools/testkey.pk8
 
-echo $wdir
-exit 1
 shift 0
 
 ifiles=$@
@@ -29,5 +27,5 @@ ifiles=$@
 for file in $ifiles; do
 	filename=${file%.*}
 	extension=${file##*.}
-	java -jar $SIGNAPK $TESTKEY_PEM $TESTKEY_KEY $file ${filename}-signd.${extension}
+	java -jar $SIGNAPK $TESTKEY_PEM $TESTKEY_KEY $file ${filename}-signed.${extension}
 done
