@@ -58,7 +58,7 @@ pack_rom()
 
 	# copy symbolic generator
 	mkdir -p system/xbin/
-	cp $GEN_SH system/xbin/
+	cp $gen_sh system/xbin/
 
 	7za a $old_pwd/rom_update.zip system boot.img
 	cd $MY_ANDROID_TOOLS_DIR/rom_build
