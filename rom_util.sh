@@ -45,6 +45,8 @@ pack_rom()
 
 	clean_rom $old_pwd
 
+	cd out/target/product/olympus
+
 	# zipalign apk
 	mv system/app system/app_bak
 	apks=`ls system/app_bak/*.apk`
